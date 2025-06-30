@@ -30,8 +30,8 @@ def smart_parse(x):
                 
                 return ast.literal_eval(x)
             except Exception as e:
-                print("❌ Ошибка при парсинге:", e)
-                print("Строка:", x[:100])
+                print("error", e)
+                print("line", x[:100])
                 return None
     elif isinstance(x, list):
         return x
